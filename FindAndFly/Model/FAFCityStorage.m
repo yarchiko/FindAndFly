@@ -96,7 +96,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         NSLog(@"Completion: %@", ticketsComplition);
         if (ticketsComplition[@"Error"] == [NSNull null]) {
             NSString *idSynonim = ticketsComplition[@"IdSynonym"];
-            NSString *id = ticketsComplition[@"Id"];
+            // NSString *id = ticketsComplition[@"Id"];
             [_networking getStateOfSearchWith:idSynonim andCompletion:^(NSDictionary *stateCompletion) {
                 if (stateCompletion[@"Error"] == [NSNull null]) {
 #warning Stopped here yesterday
