@@ -5,20 +5,32 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--AirportFinder-->
         <scene sceneID="91h-gw-87B">
             <objects>
-                <tableViewController id="fV8-V4-kz6" sceneMemberID="viewController">
+                <tableViewController title="AirportFinder" id="fV8-V4-kz6" customClass="FAFTownsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sPX-ur-HSH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zcw-BP-2RV">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cityViewCell" textLabel="sTg-no-LiE" style="IBUITableViewCellStyleDefault" id="zcw-BP-2RV" customClass="FAFCityViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zcw-BP-2RV" id="RwH-NA-ZPh">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sTg-no-LiE">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="sTg-no-LiE" id="eSL-IW-Py9"/>
+                                    <segue destination="PDM-Uv-lxP" kind="show" id="ZMX-wb-KT3"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -26,11 +38,32 @@
                             <outlet property="delegate" destination="fV8-V4-kz6" id="qrZ-ME-qt9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="39K-E0-7yc"/>
+                    <navigationItem key="navigationItem" title="Выберите город отправления" id="39K-E0-7yc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Nc-IA-suu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-149" y="17"/>
+        </scene>
+        <!--NewRequest2-->
+        <scene sceneID="h8t-Tn-OO9">
+            <objects>
+                <viewController title="NewRequest2" id="PDM-Uv-lxP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j7L-UT-avW"/>
+                        <viewControllerLayoutGuide type="bottom" id="43B-fv-xRd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uDR-lC-tgo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Выберите настройки рейса" id="ZVq-fy-8tF"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8b-Qn-Xzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="17"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xYj-gG-VaD">
