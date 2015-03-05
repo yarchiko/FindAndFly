@@ -5,21 +5,22 @@
 //  Created by Mega on 03/03/15.
 //  Copyright (c) 2015 8of. All rights reserved.
 //
-
-#import "FAFLocation.h"
 #import <CoreLocation/CoreLocation.h>
+#import "FAFLocation.h"
+#import "FAFAlertViewGenerator.h"
 
 @interface FAFLocation () <CLLocationManagerDelegate>
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *location;
+@property (strong, nonatomic) FAFAlertViewGenerator *alertViewGenenerator;
 
 @end
 
 @implementation FAFLocation
 
 /**
- *  Not permitting to create multiple instances of Singleton FAFLocation
+ *  Запрещаем создавать несколько FAFLocation
  *
  *  @return always nil
  */
@@ -40,13 +41,14 @@
 }
 
 /**
- *  First time initing - set default vals.
+ *  Первый инит - первичная настройка
  *
  *  @return FAFLocation
  */
 - (instancetype)initPrivate {
     self = [super init];
     if (self) {
+        _alertViewGenenerator = [[FAFAlertViewGenerator alloc] init];
         _isLocationProvided = NO;
         _needMoreLocation = YES;
         _locationManager = [[CLLocationManager alloc] init];
@@ -60,7 +62,8 @@
          *  Проверяем селеектор
          *  Если откликается - посылаем сообщение
          */
-        if([_locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        
+        if([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
             /**
              *  Приложение не использует информацию о местоположении в фоновом режиме,
              *  поэтому нам хватит и этого метода.
@@ -87,6 +90,7 @@
     /**
      *  Запуск делегатного метода
      */
+    
     if (_needMoreLocation) {
         _needMoreLocation = NO;
         [_locationDelegate getResultsWithLatitude:latitude
@@ -109,6 +113,10 @@
 
 - (void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error {
+    NSString *alertTitle = NSLocalizedString(@"Локация недоступна", "Заголовок alertView, сообщающий о том, что пользователю не включил локацию в настройках");
+    NSString *alertDescription = NSLocalizedString(@"Если ваше устройство поддерживает сервис Локации, разрешите использование локации в настройках телефона", @"Описание ошибки определния локации (alertView description)");
+    UIAlertView *locationErrorAlertView = [_alertViewGenenerator alertViewWithTitle:alertTitle description:alertDescription];
+    [locationErrorAlertView show];
     _isLocationProvided = NO;
     _locationDelegate = nil;
     NSLog(@"Error while getting location: %@", [error localizedDescription]);

@@ -19,7 +19,6 @@
 + (instancetype)sharedLocation;
 
 @property (weak, nonatomic) id<FAFLocationDelegate> locationDelegate;
-
 @property (strong, nonatomic, readonly) NSString *latitude;
 @property (strong, nonatomic, readonly) NSString *longtitude;
 @property (assign, nonatomic, readonly) BOOL isLocationProvided;

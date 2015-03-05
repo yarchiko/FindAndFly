@@ -8,11 +8,11 @@
 
 #import "FAFAlertViewGenerator.h"
 
-@interface DVBAlertViewGenerator ()
+@interface FAFAlertViewGenerator ()
 
 @end
 
-@implementation DVBAlertViewGenerator
+@implementation FAFAlertViewGenerator
 /**
  *  Метод генерирует UIAlertView с заданными заголовком и описанием кнопкой ОК
  *
@@ -34,6 +34,5 @@
     
     return alertView;
 }
-
 
 @end

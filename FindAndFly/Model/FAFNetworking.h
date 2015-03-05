@@ -36,9 +36,9 @@
 - (void)getTicketsWith:(NSString *)date
            andCityFrom:(NSString *)cityFrom
              andCityTo:(NSString *)cityTo
-                 andAd:(NSUInteger)ad
-                 andCn:(NSUInteger)cn
-                 andIn:(NSUInteger)inn
+                 andAd:(NSString *)ad
+                 andCn:(NSString *)cn
+                 andIn:(NSString *)inn
                  andSc:(NSString *)sc
          andCompletion:(void (^)(NSDictionary *))completion;
 /**
@@ -49,4 +49,13 @@
  */
 - (void)getStateOfSearchWith:(NSString *)idSynonim
                andCompletion:(void (^)(NSDictionary *))completion;
+
+/**
+ *  Использование сервиса Fares2
+ *
+ *  @param R          из ViewController
+ *  @param completion Dicitonary ответа с сервера
+ */
+- (void)getFaresWithWithR:(NSString *)R
+            andCompletion:(void (^)(NSDictionary *))completion;
 @end

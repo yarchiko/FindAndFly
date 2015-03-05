@@ -11,12 +11,12 @@
 @implementation FAFCity
 
 /**
- *  Not permitting to create multiple instances of Singleton FAFLocation
+ *  Запрещаем вызов init
  *
- *  @return always nil
+ *  @return всегда nil
  */
 - (instancetype)init {
-    @throw [NSException exceptionWithName:@"Singleton" reason:@"Use [[FAFCity alloc] initWithName:andCity:]" userInfo:nil];
+    @throw [NSException exceptionWithName:@"Stricted" reason:@"Use [[FAFCity alloc] initWithName:andCity:]" userInfo:nil];
     
     return nil;
 }

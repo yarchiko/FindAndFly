@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface DVBAlertViewGenerator : NSObject
+@interface FAFAlertViewGenerator : NSObject
 
 - (UIAlertView *)alertViewWithTitle:(NSString *)title
                         description:(NSString *)description;

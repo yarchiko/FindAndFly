@@ -19,6 +19,8 @@ static NSString *const CITY_CELL_REUSE_IDENTIFIER = @"cityViewCell";
 @property (strong, nonatomic) NSMutableArray *privateCities;
 @property (strong, nonatomic) FAFLocation *location;
 @property (strong, nonatomic) FAFNetworking *networking;
+@property (strong, nonatomic) NSString *latitude;
+@property (strong, nonatomic) NSString *longtitude;
 
 @end
 
@@ -40,10 +42,21 @@ static NSString *const CITY_CELL_REUSE_IDENTIFIER = @"cityViewCell";
     _location.locationDelegate = self;
 }
 
+- (void)getCities {
+    if (_latitude && _longtitude) {
+        [self getResultsWithLatitude:_latitude andLongtitude:_longtitude];
+    }
+    else {
+        NSLog(@"Error - no longtitude and (or) latitude");
+    }
+}
+
 #pragma mark - FAFLocationDelegate
 
 - (void)getResultsWithLatitude:(NSString *)latitude
                  andLongtitude:(NSString *)longtitude {
+    _latitude = latitude;
+    _longtitude = longtitude;
     [_networking getTownsFromNetworkWithLatitude:latitude
                                    andLongtitude:longtitude
                                    andCompletion:^(NSDictionary *citiesAnswer)
@@ -61,7 +74,7 @@ static NSString *const CITY_CELL_REUSE_IDENTIFIER = @"cityViewCell";
         }
         _cities = _privateCities;
         [_cityStorageDelegate updateTable];
-        _privateCities = nil;
+        _privateCities = [NSMutableArray array];
     }];
 }
 
@@ -86,25 +99,11 @@ static NSString *const CITY_CELL_REUSE_IDENTIFIER = @"cityViewCell";
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSUInteger row = indexPath.row;
-    FAFCity *city = _cities[row];
-    NSString *code = city.city;
-    [_networking getTicketsWith:@"2501" andCityFrom:code andCityTo:@"LON" andAd:1 andCn:0 andIn:0 andSc:@"E" andCompletion:^(NSDictionary *ticketsComplition) {
-        // NSString  *errorAnswer = ticketsComplition[@"Error"];
-        NSLog(@"Completion: %@", ticketsComplition);
-        if (ticketsComplition[@"Error"] == [NSNull null]) {
-            NSString *idSynonim = ticketsComplition[@"IdSynonym"];
-            // NSString *id = ticketsComplition[@"Id"];
-            [_networking getStateOfSearchWith:idSynonim andCompletion:^(NSDictionary *stateCompletion) {
-                if (stateCompletion[@"Error"] == [NSNull null]) {
-#warning Stopped here yesterday
-                    NSLog(@"State: %@", stateCompletion);
-                }
-            }];
-        }
-    }];
+- (NSString *)getCityWithIndex:(NSUInteger)index {
+    FAFCity *city = _cities[index];
+    NSString *cityString = city.city;
+    
+    return cityString;
 }
 
 @end

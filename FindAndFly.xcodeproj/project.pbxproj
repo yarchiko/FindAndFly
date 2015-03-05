@@ -32,11 +32,19 @@
 		94347C991AA6440A0067191B /* FAFCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 94347C981AA6440A0067191B /* FAFCity.m */; };
 		94347C9C1AA6445F0067191B /* FAFCityStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 94347C9B1AA6445F0067191B /* FAFCityStorage.m */; };
 		94347CA11AA64F790067191B /* FAFCityViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94347CA01AA64F790067191B /* FAFCityViewCell.m */; };
+		945C7ED01AA7A05100519AB7 /* FAFadultsPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 945C7ECF1AA7A05100519AB7 /* FAFadultsPicker.m */; };
+		945C7ED31AA7A76500519AB7 /* FAFClassPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 945C7ED21AA7A76500519AB7 /* FAFClassPicker.m */; };
+		945C7ED61AA7B9E800519AB7 /* FAFFares2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945C7ED51AA7B9E800519AB7 /* FAFFares2ViewController.m */; };
+		945C7ED91AA7C22800519AB7 /* FAFAirlineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 945C7ED81AA7C22800519AB7 /* FAFAirlineViewCell.m */; };
+		945C7EDC1AA7C47C00519AB7 /* FAFAirCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 945C7EDB1AA7C47C00519AB7 /* FAFAirCompany.m */; };
+		945C7EDF1AA7C90500519AB7 /* FAFFullListOfFaresForCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 945C7EDE1AA7C90500519AB7 /* FAFFullListOfFaresForCompany.m */; };
+		945C7EE21AA7C99200519AB7 /* FAFFareViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 945C7EE11AA7C99200519AB7 /* FAFFareViewCell.m */; };
 		94FAD5311AA62653004CEF52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FAD5301AA62653004CEF52 /* main.m */; };
 		94FAD5341AA62653004CEF52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FAD5331AA62653004CEF52 /* AppDelegate.m */; };
 		94FAD53A1AA62653004CEF52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94FAD5381AA62653004CEF52 /* Main.storyboard */; };
 		94FAD53C1AA62653004CEF52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94FAD53B1AA62653004CEF52 /* Images.xcassets */; };
 		94FAD54B1AA62653004CEF52 /* FindAndFlyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FAD54A1AA62653004CEF52 /* FindAndFlyTests.m */; };
+		A1F633CB1AA6F1B1001D710F /* FAFTNewRequest2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F633CA1AA6F1B1001D710F /* FAFTNewRequest2Controller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +109,20 @@
 		94347C9B1AA6445F0067191B /* FAFCityStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FAFCityStorage.m; path = Model/FAFCityStorage.m; sourceTree = "<group>"; };
 		94347C9F1AA64F790067191B /* FAFCityViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FAFCityViewCell.h; path = View/FAFCityViewCell.h; sourceTree = "<group>"; };
 		94347CA01AA64F790067191B /* FAFCityViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FAFCityViewCell.m; path = View/FAFCityViewCell.m; sourceTree = "<group>"; };
+		945C7ECE1AA7A05100519AB7 /* FAFadultsPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FAFadultsPicker.h; path = View/FAFadultsPicker.h; sourceTree = "<group>"; };
+		945C7ECF1AA7A05100519AB7 /* FAFadultsPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FAFadultsPicker.m; path = View/FAFadultsPicker.m; sourceTree = "<group>"; };
+		945C7ED11AA7A76500519AB7 /* FAFClassPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FAFClassPicker.h; path = View/FAFClassPicker.h; sourceTree = "<group>"; };
+		945C7ED21AA7A76500519AB7 /* FAFClassPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FAFClassPicker.m; path = View/FAFClassPicker.m; sourceTree = "<group>"; };
+		945C7ED41AA7B9E800519AB7 /* FAFFares2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FAFFares2ViewController.h; path = Controller/FAFFares2ViewController.h; sourceTree = "<group>"; };
+		945C7ED51AA7B9E800519AB7 /* FAFFares2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FAFFares2ViewController.m; path = Controller/FAFFares2ViewController.m; sourceTree = "<group>"; };
+		945C7ED71AA7C22800519AB7 /* FAFAirlineViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FAFAirlineViewCell.h; path = View/FAFAirlineViewCell.h; sourceTree = "<group>"; };
+		945C7ED81AA7C22800519AB7 /* FAFAirlineViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FAFAirlineViewCell.m; path = View/FAFAirlineViewCell.m; sourceTree = "<group>"; };
+		945C7EDA1AA7C47C00519AB7 /* FAFAirCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FAFAirCompany.h; path = Model/FAFAirCompany.h; sourceTree = "<group>"; };
+		945C7EDB1AA7C47C00519AB7 /* FAFAirCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FAFAirCompany.m; path = Model/FAFAirCompany.m; sourceTree = "<group>"; };
+		945C7EDD1AA7C90500519AB7 /* FAFFullListOfFaresForCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FAFFullListOfFaresForCompany.h; path = Controller/FAFFullListOfFaresForCompany.h; sourceTree = "<group>"; };
+		945C7EDE1AA7C90500519AB7 /* FAFFullListOfFaresForCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FAFFullListOfFaresForCompany.m; path = Controller/FAFFullListOfFaresForCompany.m; sourceTree = "<group>"; };
+		945C7EE01AA7C99200519AB7 /* FAFFareViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FAFFareViewCell.h; path = View/FAFFareViewCell.h; sourceTree = "<group>"; };
+		945C7EE11AA7C99200519AB7 /* FAFFareViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FAFFareViewCell.m; path = View/FAFFareViewCell.m; sourceTree = "<group>"; };
 		94FAD52B1AA62653004CEF52 /* FindAndFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindAndFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FAD52F1AA62653004CEF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94FAD5301AA62653004CEF52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -111,6 +133,8 @@
 		94FAD5441AA62653004CEF52 /* FindAndFlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindAndFlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FAD5491AA62653004CEF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94FAD54A1AA62653004CEF52 /* FindAndFlyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindAndFlyTests.m; sourceTree = "<group>"; };
+		A1F633C91AA6F1B1001D710F /* FAFTNewRequest2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FAFTNewRequest2Controller.h; path = Controller/FAFTNewRequest2Controller.h; sourceTree = "<group>"; };
+		A1F633CA1AA6F1B1001D710F /* FAFTNewRequest2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FAFTNewRequest2Controller.m; path = Controller/FAFTNewRequest2Controller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +244,12 @@
 			children = (
 				94347C851AA6295D0067191B /* FAFTownsViewController.h */,
 				94347C861AA6295D0067191B /* FAFTownsViewController.m */,
+				A1F633C91AA6F1B1001D710F /* FAFTNewRequest2Controller.h */,
+				A1F633CA1AA6F1B1001D710F /* FAFTNewRequest2Controller.m */,
+				945C7ED41AA7B9E800519AB7 /* FAFFares2ViewController.h */,
+				945C7ED51AA7B9E800519AB7 /* FAFFares2ViewController.m */,
+				945C7EDD1AA7C90500519AB7 /* FAFFullListOfFaresForCompany.h */,
+				945C7EDE1AA7C90500519AB7 /* FAFFullListOfFaresForCompany.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -229,6 +259,8 @@
 			children = (
 				94347C971AA6440A0067191B /* FAFCity.h */,
 				94347C981AA6440A0067191B /* FAFCity.m */,
+				945C7EDA1AA7C47C00519AB7 /* FAFAirCompany.h */,
+				945C7EDB1AA7C47C00519AB7 /* FAFAirCompany.m */,
 			);
 			name = "Simple Classes";
 			sourceTree = "<group>";
@@ -238,6 +270,14 @@
 			children = (
 				94347C9F1AA64F790067191B /* FAFCityViewCell.h */,
 				94347CA01AA64F790067191B /* FAFCityViewCell.m */,
+				945C7ECE1AA7A05100519AB7 /* FAFadultsPicker.h */,
+				945C7ECF1AA7A05100519AB7 /* FAFadultsPicker.m */,
+				945C7ED11AA7A76500519AB7 /* FAFClassPicker.h */,
+				945C7ED21AA7A76500519AB7 /* FAFClassPicker.m */,
+				945C7ED71AA7C22800519AB7 /* FAFAirlineViewCell.h */,
+				945C7ED81AA7C22800519AB7 /* FAFAirlineViewCell.m */,
+				945C7EE01AA7C99200519AB7 /* FAFFareViewCell.h */,
+				945C7EE11AA7C99200519AB7 /* FAFFareViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -403,29 +443,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				945C7ED31AA7A76500519AB7 /* FAFClassPicker.m in Sources */,
 				94347C661AA628380067191B /* AFURLRequestSerialization.m in Sources */,
 				94347C651AA628380067191B /* AFURLConnectionOperation.m in Sources */,
 				94347C991AA6440A0067191B /* FAFCity.m in Sources */,
 				94347C7D1AA6283F0067191B /* UIAlertView+AFNetworking.m in Sources */,
 				94347C641AA628380067191B /* AFSecurityPolicy.m in Sources */,
+				945C7ED61AA7B9E800519AB7 /* FAFFares2ViewController.m in Sources */,
 				94347CA11AA64F790067191B /* FAFCityViewCell.m in Sources */,
 				94347C961AA637B00067191B /* FAFNetworking.m in Sources */,
 				94347C601AA628380067191B /* AFHTTPRequestOperation.m in Sources */,
+				A1F633CB1AA6F1B1001D710F /* FAFTNewRequest2Controller.m in Sources */,
 				94347C681AA628380067191B /* AFURLSessionManager.m in Sources */,
 				94347C871AA6295D0067191B /* FAFTownsViewController.m in Sources */,
+				945C7EDC1AA7C47C00519AB7 /* FAFAirCompany.m in Sources */,
 				94347C671AA628380067191B /* AFURLResponseSerialization.m in Sources */,
 				94FAD5341AA62653004CEF52 /* AppDelegate.m in Sources */,
 				94347C801AA6283F0067191B /* UIProgressView+AFNetworking.m in Sources */,
 				94347C621AA628380067191B /* AFHTTPSessionManager.m in Sources */,
+				945C7EE21AA7C99200519AB7 /* FAFFareViewCell.m in Sources */,
 				94347C931AA630920067191B /* FAFAlertViewGenerator.m in Sources */,
 				94347C7B1AA6283F0067191B /* AFNetworkActivityIndicatorManager.m in Sources */,
 				94347C611AA628380067191B /* AFHTTPRequestOperationManager.m in Sources */,
 				94347C8A1AA62BD40067191B /* FAFLocation.m in Sources */,
 				94347C7F1AA6283F0067191B /* UIImageView+AFNetworking.m in Sources */,
+				945C7ED01AA7A05100519AB7 /* FAFadultsPicker.m in Sources */,
 				94347C7E1AA6283F0067191B /* UIButton+AFNetworking.m in Sources */,
 				94347C811AA6283F0067191B /* UIRefreshControl+AFNetworking.m in Sources */,
 				94347C9C1AA6445F0067191B /* FAFCityStorage.m in Sources */,
+				945C7EDF1AA7C90500519AB7 /* FAFFullListOfFaresForCompany.m in Sources */,
 				94347C821AA6283F0067191B /* UIWebView+AFNetworking.m in Sources */,
+				945C7ED91AA7C22800519AB7 /* FAFAirlineViewCell.m in Sources */,
 				94347C631AA628380067191B /* AFNetworkReachabilityManager.m in Sources */,
 				94FAD5311AA62653004CEF52 /* main.m in Sources */,
 				94347C7C1AA6283F0067191B /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -544,6 +592,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = FindAndFly/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -555,6 +604,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = FindAndFly/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

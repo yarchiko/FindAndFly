@@ -7,6 +7,7 @@
 //
 #import "FAFTownsViewController.h"
 #import "FAFCityStorage.h"
+#import "FAFTNewRequest2Controller.h"
 
 @interface FAFTownsViewController () <FAFCityStorageDelegate>
 
@@ -21,7 +22,7 @@
     self.clearsSelectionOnViewWillAppear = YES;
     
     _cityStorage = [[FAFCityStorage alloc] init];
-    self.tableView.delegate = _cityStorage;
+    self.tableView.delegate = self;
     self.tableView.dataSource = _cityStorage;
     _cityStorage.cityStorageDelegate = self;
 }
@@ -32,14 +33,18 @@
     [self.tableView reloadData];
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    FAFTNewRequest2Controller *newRequest2Controller = [segue destinationViewController];
+    NSIndexPath *selectedCellPath = [self.tableView indexPathForSelectedRow];
+    NSUInteger row = selectedCellPath.row;
+    newRequest2Controller.cityFrom = [_cityStorage getCityWithIndex:row];
 }
-*/
+
+- (IBAction)refreshCitiesAction:(id)sender {
+    [_cityStorage getCities];
+}
 
 @end

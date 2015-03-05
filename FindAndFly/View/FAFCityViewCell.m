@@ -17,7 +17,6 @@
 @implementation FAFCityViewCell
 
 - (void)prepareCellWithCity:(FAFCity *)city {
-    
     NSString *name = city.name;
     _nameLabel.text = name;
 }

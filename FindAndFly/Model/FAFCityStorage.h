@@ -19,4 +19,7 @@
 @property (weak, nonatomic) id<FAFCityStorageDelegate> cityStorageDelegate;
 @property (strong, nonatomic) NSArray *cities;
 
+- (void)getCities;
+- (NSString *)getCityWithIndex:(NSUInteger)index;
+
 @end
