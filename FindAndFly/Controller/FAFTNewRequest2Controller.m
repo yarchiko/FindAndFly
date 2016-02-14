@@ -69,7 +69,7 @@ static NSString *const SEGUE_TO_FARES2 = @"segueToFares2";
     NSInteger day = [components day];
     NSInteger month = [components month];
     
-    NSString *dateForApi = [[NSString alloc] initWithFormat:@"%02d%02d", day, month];
+    NSString *dateForApi = [[NSString alloc] initWithFormat:@"%02ld%02ld", (long)day, (long)month];
     
     NSString *adults = _adultsPicker.selectedValue;
     NSString *class = _classPicker.selectedValue;
